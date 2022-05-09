@@ -2,7 +2,8 @@
 
 ## ℹ️ Introduction
 
-This project was created using the following Github template - https://github.com/CodelyTV/java-basic-skeleton
+This project was created using the following Github template - https://github.com/CodelyTV/java-basic-skeleton.
+
 
 ## 🏁 How To Start
 
@@ -13,6 +14,7 @@ This project was created using the following Github template - https://github.co
     1. Create [the project JAR](https://docs.gradle.org/current/userguide/java_plugin.html#sec:jar): `make build`
     2. Run the tests and plugins verification tasks: `make test`
 5. Start developing!
+
 
 ## ☝️ How to update dependencies
 
