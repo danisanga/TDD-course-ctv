@@ -10,14 +10,14 @@ public class ProductPricingServiceTest {
 
     @Test
     void calculatePriceWithVAT_shouldCalculateTheCorrectPrice_whenCountryIsSpain() {
-        double priceCalculated = productPricingService.calculatePriceWithVAT(20.0);
+        double priceCalculated = productPricingService.calculatePriceWithVAT(20.0, "ES");
 
         assertThat(priceCalculated).isEqualTo(24.2);
     }
 
     @Test
     void calculatePriceWithVAT_shouldCalculateTheCorrectPrice_whenCountryIsAustralia() {
-        double priceCalculated = productPricingService.calculatePriceWithVAT(20.0);
+        double priceCalculated = productPricingService.calculatePriceWithVAT(20.0, "AU");
 
         assertThat(priceCalculated).isEqualTo(22.0);
     }

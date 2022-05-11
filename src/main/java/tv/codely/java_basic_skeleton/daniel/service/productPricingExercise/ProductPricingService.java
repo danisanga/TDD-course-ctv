@@ -6,9 +6,15 @@ public class ProductPricingService {
         // Empty constructor.
     }
 
-    public double calculatePriceWithVAT(final double price) {
+    public double calculatePriceWithVAT(final double price, final String countryISO) {
 
-        final double vat = 21 * price / 100;
+        double vat = 0;
+
+        if ("ES".equals(countryISO)) {
+            vat = 21 * price / 100;
+        } else if ("AU".equals(countryISO)) {
+            vat = 10 * price / 100;
+        }
 
         return vat + price;
     }
