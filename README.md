@@ -34,3 +34,7 @@ We need to sell products in our online platform, so we have to calculate the tot
 The total price of a product that we are going to show to the customer must have the 21% VAT included.
 
 During the exercise development, try to use 🔴 , 🟢 and 🔵 to identify in which TDD phase you are.
+
+#### Extra work
+Nice job! Now you know what you need to pay when you buy in Spain.
+* What about Australia? VAT in Australia: 10%
