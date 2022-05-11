@@ -22,3 +22,15 @@ This project was created using the following Github template - https://github.co
 `./gradlew wrapper --gradle-version=5.6 --distribution-type=bin` or modifying the [gradle-wrapper.properties](gradle/wrapper/gradle-wrapper.properties#L3)
 * JUnit (current version: 5.5.1 - [releases](https://junit.org/junit5/docs/snapshot/release-notes/index.html)):
 [`build.gradle:11`](build.gradle#L11-L12)
+
+## Exercises
+
+### Product pricing
+Introductory TDD exercise.
+
+### User story description
+We need to sell products in our online platform, so we have to calculate the total price of them.
+
+The total price of a product that we are going to show to the customer must have the 21% VAT included.
+
+During the exercise development, try to use 🔴 , 🟢 and 🔵 to identify in which TDD phase you are.
