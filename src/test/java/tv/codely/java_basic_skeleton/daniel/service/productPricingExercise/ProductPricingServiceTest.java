@@ -9,10 +9,17 @@ public class ProductPricingServiceTest {
     private final ProductPricingService productPricingService = new ProductPricingService();
 
     @Test
-    void calculatePriceWithVAT_shouldCalculateTheCorrectPrice() {
+    void calculatePriceWithVAT_shouldCalculateTheCorrectPrice_whenCountryIsSpain() {
         double priceCalculated = productPricingService.calculatePriceWithVAT(20.0);
 
         assertThat(priceCalculated).isEqualTo(24.2);
+    }
+
+    @Test
+    void calculatePriceWithVAT_shouldCalculateTheCorrectPrice_whenCountryIsAustralia() {
+        double priceCalculated = productPricingService.calculatePriceWithVAT(20.0);
+
+        assertThat(priceCalculated).isEqualTo(22.0);
     }
 
 }
