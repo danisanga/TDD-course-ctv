@@ -38,4 +38,4 @@ During the exercise development, try to use 🔴 , 🟢 and 🔵 to identify in 
 #### Extra work
 Nice job! Now you know what you need to pay when you buy in Spain.
 * What about Australia? VAT in Australia: 10%
-* What about Canada? VAT in Australia: 13%
+* What about Canada? VAT in Canada: 13%
