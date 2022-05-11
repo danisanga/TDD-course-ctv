@@ -1,37 +1,42 @@
 package tv.codely.java_basic_skeleton.daniel.service.productPricingExercise;
 
+import tv.codely.java_basic_skeleton.daniel.util.productPricingExercise.CountryVATUtils;
+
 public class ProductPricingService {
 
     public ProductPricingService() {
         // Empty constructor.
     }
 
-    public double calculatePriceWithVAT(final double price, final String countryISO) {
-
-        double vatValue = 0;
-
-        if ("ES".equals(countryISO)) {
-            vatValue = calculateVATAmount(price, 21);
-        } else if ("AU".equals(countryISO)) {
-            vatValue = calculateVATAmount(price, 10);
-        }
+    /**
+     * Calculate total price by country ISO.
+     *
+     * @param price         the product price
+     * @param countryISO    the country ISO
+     * @return  the calculated total price.
+     */
+    public double calculateTotalPriceWithVAT(final double price, final String countryISO) {
+        double vatValue = calculateVATAmountByCountry(price, countryISO);
 
         return vatValue + price;
     }
 
     /**
-     * Calculate amount to increase to the product price by specific price and vat value.
+     * Calculate amount to increase to the product price by specific price and country ISO.
      *
-     * @param price     the product price
-     * @param vatValue  the vat value
-     * @return the calculated price of the product
+     * @param price         the product price
+     * @param countryISO    the country ISO
+     * @return the calculated vat amount of the product
      */
-    private double calculateVATAmount(
+    private double calculateVATAmountByCountry(
         final double price,
-        final double vatValue) {
+        final String countryISO) {
 
-        return vatValue * price / 100;
+        final CountryVATUtils countryVATUtils = new CountryVATUtils();
+
+        double vatValueByCountry = countryVATUtils.getVATValueByCountry(countryISO);
+
+        return vatValueByCountry * price / 100;
 
     }
-
 }
