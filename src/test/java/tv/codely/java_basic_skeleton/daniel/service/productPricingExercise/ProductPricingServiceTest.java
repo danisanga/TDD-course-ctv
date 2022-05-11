@@ -22,4 +22,11 @@ public class ProductPricingServiceTest {
         assertThat(priceCalculated).isEqualTo(22.0);
     }
 
+    @Test
+    void calculatePriceWithVAT_shouldCalculateTheCorrectPrice_whenCountryIsCanada() {
+        double priceCalculated = productPricingService.calculateTotalPriceWithVAT(20.0, "CA");
+
+        assertThat(priceCalculated).isEqualTo(22.6);
+    }
+
 }
