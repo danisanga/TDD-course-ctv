@@ -20,6 +20,9 @@ public class CountryVATUtils {
         if ("AU".equals(countryISO)) {
             return 10;
         }
+        if ("CA".equals(countryISO)) {
+            return 13;
+        }
 
         return 0;
     }
