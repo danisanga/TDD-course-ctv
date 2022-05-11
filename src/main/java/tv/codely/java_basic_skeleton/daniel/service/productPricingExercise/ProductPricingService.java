@@ -8,14 +8,30 @@ public class ProductPricingService {
 
     public double calculatePriceWithVAT(final double price, final String countryISO) {
 
-        double vat = 0;
+        double vatValue = 0;
 
         if ("ES".equals(countryISO)) {
-            vat = 21 * price / 100;
+            vatValue = calculateVATAmount(price, 21);
         } else if ("AU".equals(countryISO)) {
-            vat = 10 * price / 100;
+            vatValue = calculateVATAmount(price, 10);
         }
 
-        return vat + price;
+        return vatValue + price;
     }
+
+    /**
+     * Calculate amount to increase to the product price by specific price and vat value.
+     *
+     * @param price     the product price
+     * @param vatValue  the vat value
+     * @return the calculated price of the product
+     */
+    private double calculateVATAmount(
+        final double price,
+        final double vatValue) {
+
+        return vatValue * price / 100;
+
+    }
+
 }
