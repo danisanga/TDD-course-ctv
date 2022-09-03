@@ -1,11 +1,15 @@
-package tv.codely.java_basic_skeleton.daniel.model;
+package com.daniel.feature.vat.model;
 
+/**
+ * Model class for Price.
+ */
 public class PriceModel {
 
     private String type;
     private Double amount;
 
     public PriceModel() {
+        // Empty constructor.
     }
 
     public PriceModel(String type, Double amount) {

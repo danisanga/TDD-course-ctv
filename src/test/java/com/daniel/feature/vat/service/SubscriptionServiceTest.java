@@ -1,4 +1,4 @@
-package tv.codely.java_basic_skeleton.daniel.service;
+package com.daniel.feature.vat.service;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

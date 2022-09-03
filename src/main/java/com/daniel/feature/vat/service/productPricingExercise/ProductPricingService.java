@@ -1,7 +1,10 @@
-package tv.codely.java_basic_skeleton.daniel.service.productPricingExercise;
+package com.daniel.feature.vat.service.productPricingExercise;
 
-import tv.codely.java_basic_skeleton.daniel.util.productPricingExercise.CountryVATUtils;
+import com.daniel.feature.vat.util.productPricingExercise.CountryVATUtils;
 
+/**
+ * Product pricing service class. Product pricing functionalities.
+ */
 public class ProductPricingService {
 
     public ProductPricingService() {
@@ -15,8 +18,11 @@ public class ProductPricingService {
      * @param countryISO    the country ISO
      * @return  the calculated total price.
      */
-    public double calculateTotalPriceWithVAT(final double price, final String countryISO) {
-        double vatValue = calculateVATAmountByCountry(price, countryISO);
+    public double calculateTotalPriceWithVAT(
+        final double price,
+        final String countryISO) {
+
+        final double vatValue = calculateVATAmountByCountry(price, countryISO);
 
         return vatValue + price;
     }
@@ -34,7 +40,7 @@ public class ProductPricingService {
 
         final CountryVATUtils countryVATUtils = new CountryVATUtils();
 
-        double vatValueByCountry = countryVATUtils.getVATValueByCountry(countryISO);
+        final int vatValueByCountry = countryVATUtils.getVATValueByCountry(countryISO);
 
         return vatValueByCountry * price / 100;
 

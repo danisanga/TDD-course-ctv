@@ -1,4 +1,4 @@
-package tv.codely.java_basic_skeleton.daniel.service.productPricingExercise;
+package com.daniel.feature.vat.service.productPricingExercise;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,6 +27,13 @@ public class ProductPricingServiceTest {
         double priceCalculated = productPricingService.calculateTotalPriceWithVAT(20.0, "CA");
 
         assertThat(priceCalculated).isEqualTo(22.6);
+    }
+
+    @Test
+    void calculateTotalPriceWithVAT_shouldThrowAnException_whenCountryIsNotPresentInData() {
+        double priceCalculated = productPricingService.calculateTotalPriceWithVAT(200.0, "NU");
+
+        assertThat(priceCalculated).isEqualTo(200.0);
     }
 
 }
